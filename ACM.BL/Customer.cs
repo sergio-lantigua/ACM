@@ -2,6 +2,10 @@
 {
     public class Customer
     {
+        public Customer()
+        {
+
+        }
         public Customer(int customerId)
         {
             _instanceCounter += 1;
@@ -55,6 +59,15 @@
             return new List<Customer>();
         }
 
+
+        ///<summary>
+        /// Save the current customer.
+        ///</summary>
+        ///<returns></returns>
+        public bool Save()
+        {
+            return true;
+        }
 
         ///<summary>
         /// Validates the customer data

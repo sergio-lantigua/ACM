@@ -8,7 +8,7 @@ namespace ACM.BLTest
         public void FullNameTestValid()
         {
             //-- Arrange
-            Customer customer = new Customer(1)
+            Customer customer = new Customer
             {
                 FirstName = "Bilbo",
                 LastName = "Baggings"
@@ -28,7 +28,7 @@ namespace ACM.BLTest
         [Fact]
         public void FullName_FirstNameEmpty_ReturnLastName() {
             //-- Arrange
-            Customer customer = new Customer(1)
+            Customer customer = new Customer
             {
                 LastName = "Baggings"
             };
@@ -48,7 +48,7 @@ namespace ACM.BLTest
         public void FullName_LastNameEmpty_ReturnFirstName()
         {
             //-- Arrange
-            Customer customer = new Customer(1)
+            Customer customer = new Customer
             {
                 FirstName = "Bilbo"
             };
@@ -69,7 +69,7 @@ namespace ACM.BLTest
         public void InstanceCounter()
         {
             //-- Arrange
-            Customer customer = new Customer(1)
+            Customer customer = new Customer
             {
                 FirstName = "Bilbo"
             };
@@ -89,7 +89,7 @@ namespace ACM.BLTest
         public void ValidateValid()
         {
             //-- Arrange
-            Customer customer = new Customer(1)
+            Customer customer = new Customer
             {
                 FirstName = "Bilbo",
                 LastName = "Baggings"
@@ -110,7 +110,7 @@ namespace ACM.BLTest
         public void Validate_MissingFirstNameLastName_ReturnFalse( )
         {
             //-- Arrange
-            Customer customer = new Customer(1)
+            Customer customer = new Customer
             {
                 EmailAddress = "pepe@gmail.com"
             };
