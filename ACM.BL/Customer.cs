@@ -2,7 +2,6 @@
 {
     public class Customer
     {
-        //$"{LastName}, {FirstName}"
         public string FirstName { get; set; }
         public string EmailAddress { get; set; }
         public int CustomerId { get; private set; }
@@ -25,6 +24,14 @@
 
         private string _lastName;
         public string LastName { get => _lastName; set => _lastName = value; }
+        public static int InstanceCounter { get => _instanceCounter; }
+
+        private static int _instanceCounter;
+
+        public Customer()
+        {
+            _instanceCounter += 1;
+        }
 
     }
 }
