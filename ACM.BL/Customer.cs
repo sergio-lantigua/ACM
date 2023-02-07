@@ -2,9 +2,16 @@
 {
     public class Customer
     {
+        public Customer(int customerId)
+        {
+            _instanceCounter += 1;
+            CustomerId = customerId; 
+
+        }
+
         public string FirstName { get; set; }
         public string EmailAddress { get; set; }
-        public int CustomerId { get; private set; }
+        public int CustomerId { get; }
         public string FullName  
         {
             get 
@@ -28,10 +35,39 @@
 
         private static int _instanceCounter;
 
-        public Customer()
+
+
+        ///<summary>
+        /// Retrieve one customer.
+        ///</summary>
+        ///<returns></returns>
+        public Customer Retrieve(int customerId)
         {
-            _instanceCounter += 1;
+            return new Customer(1);
         }
 
+        ///<summary>
+        /// Retrieve all customer.
+        ///</summary>
+        ///<returns></returns>
+        public List<Customer> Retrieve()
+        {
+            return new List<Customer>();
+        }
+
+
+        ///<summary>
+        /// Validates the customer data
+        ///</summary>
+        ///<returns></returns>
+        public bool Validate()
+        {
+            bool isValid = true;
+
+            if (string.IsNullOrWhiteSpace(FirstName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+
+            return isValid;
+        }
     }
 }
