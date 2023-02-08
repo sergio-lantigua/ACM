@@ -2,7 +2,7 @@
 {
     public class Customer
     {
-        public Customer()
+        public Customer():this(0)
         {
 
         }
@@ -10,10 +10,12 @@
         {
             _instanceCounter += 1;
             CustomerId = customerId; 
+            AddressList = new List<Address>();
 
         }
-
+        public List<Address> AddressList { get; set; }
         public string FirstName { get; set; }
+        public int CustomerType { get; set; }
         public string EmailAddress { get; set; }
         public int CustomerId { get; }
         public string FullName  
