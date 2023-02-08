@@ -20,26 +20,6 @@ namespace ACM.BL
         public DateTimeOffset? OrderDate { get; set; }
         public int OrderId { get; }
 
-
-        ///<summary>
-        /// Retrieve one order.
-        ///</summary>
-        ///<returns></returns>
-        public Order Retrieve(int orderId)
-        {
-            return new Order();
-        }
-
-        ///<summary>
-        /// Save the current order .
-        ///</summary>
-        ///<returns></returns>
-        public bool Save()
-        {
-            return true;
-        }
-
-
         ///<summary>
         /// Validates the order data
         ///</summary>

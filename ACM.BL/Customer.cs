@@ -39,36 +39,6 @@
 
         private static int _instanceCounter;
 
-
-
-        ///<summary>
-        /// Retrieve one customer.
-        ///</summary>
-        ///<returns></returns>
-        public Customer Retrieve(int customerId)
-        {
-            return new Customer(1);
-        }
-
-        ///<summary>
-        /// Retrieve all customer.
-        ///</summary>
-        ///<returns></returns>
-        public List<Customer> Retrieve()
-        {
-            return new List<Customer>();
-        }
-
-
-        ///<summary>
-        /// Save the current customer.
-        ///</summary>
-        ///<returns></returns>
-        public bool Save()
-        {
-            return true;
-        }
-
         ///<summary>
         /// Validates the customer data
         ///</summary>

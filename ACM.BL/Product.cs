@@ -25,33 +25,6 @@ namespace ACM.BL
         public Decimal? CurrentPrice { get; set; } 
 
         ///<summary>
-        /// Retrieve one product.
-        ///</summary>
-        ///<returns></returns>
-        public Product Retrieve(int productId)
-        {
-            return new Product();
-        }
-
-        ///<summary>
-        /// Retrieve all products.
-        ///</summary>
-        ///<returns></returns>
-        public List<Product> Retrieve()
-        {
-            return new List<Product>();
-        }
-
-        ///<summary>
-        /// Save the current product.
-        ///</summary>
-        ///<returns></returns>
-        public bool Save()
-        {
-            return true;
-        }
-
-        ///<summary>
         /// Validates the product data
         ///</summary>
         ///<returns></returns>
