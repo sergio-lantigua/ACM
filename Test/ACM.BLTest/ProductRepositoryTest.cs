@@ -34,5 +34,54 @@ namespace ACM.BLTest
             Assert.Equal(expected.Description, actual.Description);
             Assert.Equal(expected.CurrentPrice, actual.CurrentPrice);
         }
+
+        [Fact]
+        public void SaveTestValid()
+        {
+            //-- Arrange
+            ProductRepository productRepository = new ProductRepository();
+
+            Product updatedProduct = new Product(1)
+            {
+                ProductName = "Creatina",
+                Description = "Enhance the strength of the muscle",
+                CurrentPrice = 20.25M,
+                HasChanges = true
+            };
+
+
+
+            //-- Act
+            bool actual = productRepository.Save(updatedProduct);
+
+
+            //-- Assert
+            Assert.True(actual);
+        }
+
+        [Fact]
+        public void SaveTestMissingPrice()
+        {
+            //-- Arrange
+            ProductRepository productRepository = new ProductRepository();
+
+            Product updatedProduct = new Product(1)
+            {
+                ProductName = "Creatina",
+                Description = "Enhance the strength of the muscle",
+                CurrentPrice = null,
+                HasChanges = true
+            };
+
+
+
+            //-- Act
+            bool actual = productRepository.Save(updatedProduct);
+
+
+            //-- Assert
+            Assert.False(actual);
+        }
+
     }
 }
