@@ -41,6 +41,8 @@
 
         private static int _instanceCounter;
 
+        public override string ToString() => FullName;
+
         ///<summary>
         /// Validates the customer data
         ///</summary>
