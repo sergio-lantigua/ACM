@@ -1,6 +1,8 @@
-﻿namespace ACM.BL
+﻿using Acme.Common;
+
+namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase, ILoggable
     {
         public Customer():this(0)
         {
@@ -47,7 +49,7 @@
         /// Validates the customer data
         ///</summary>
         ///<returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
 
@@ -56,5 +58,7 @@
 
             return isValid;
         }
+
+        public string Log() => $"{CustomerId}: {FullName} Email: {EmailAddress} Status: {EntityState.ToString()}";
     }
 }

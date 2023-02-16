@@ -3,12 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -42,5 +43,7 @@ namespace ACM.BL
 
             return isValid;
         }
+
+        public string Log() => $"{ProductId}: {ProductName} Description: {Description} Status: {EntityState.ToString()}";
     }
 }
