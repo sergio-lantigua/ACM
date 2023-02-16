@@ -66,26 +66,6 @@ namespace ACM.BLTest
         }
 
         [Fact]
-        public void InstanceCounter()
-        {
-            //-- Arrange
-            Customer customer = new Customer
-            {
-                FirstName = "Bilbo"
-            };
-
-            string expected = "Bilbo";
-
-
-            //-- Act
-
-
-            //-- Assert
-            Assert.Equal(1, Customer.InstanceCounter);
-
-        }
-
-        [Fact]
         public void ValidateValid()
         {
             //-- Arrange

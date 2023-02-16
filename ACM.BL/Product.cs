@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acme.Common;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -16,11 +17,13 @@ namespace ACM.BL
 
         public Product(int productId)
         {
-            ProductId = productId;  
+            ProductId = productId;
         }
 
         public int ProductId { get; }
-        public string ProductName { get; set; } = string.Empty;
+
+        private string _productName = string.Empty;
+        public string ProductName { get => _productName.InsertSpaces(); set => _productName = value; }
         public string Description { get; set; } = String.Empty;
         public Decimal? CurrentPrice { get; set; }
 
